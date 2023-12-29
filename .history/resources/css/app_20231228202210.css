@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.blur-sm {
+    filter: blur(8px);
+}
+
+.dashboard-container {
+    padding: 1rem;
+    max-width: 800px; /* Adjust to your preferred max width */
+    margin: auto;
+    background: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.appointments-container {
+    padding: 1rem;
+}
+
+.appointments-list {
+    margin-top: 1rem;
+}
+
+.appointment-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    background: #F9F9F9; /* Light grey background */
+}
+
+.service-image {
+    width: 40px; /* Adjust as needed */
+    height: 40px; /* Adjust as needed */
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem;
+}
+
+.service-details {
+    flex-grow: 1;
+}
+
+.service-name {
+    font-weight: bold;
+    display: block;
+}
+
+.service-duration {
+    color: #666;
+    font-size: 0.875rem;
+}
+
+.appointment-info {
+    text-align: right;
+    margin-left: auto;
+}
+
+.appointment-date, .appointment-time {
+    display: block;
+    color: #333;
+}
