@@ -22,7 +22,6 @@ export default function ChooseAppointments({
     const [showModal, setShowModal] = useState(false);
     const busyTimes = [];
 
-    console.log(selectedDate)
 
 
     useScrollLock(showModal, setShowModal);
@@ -109,6 +108,13 @@ export default function ChooseAppointments({
         </div>
         {!loading && <button type="submit" className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Book Appointment</button>}
     </form>
-        <UsePoints showModal={showModal} setShowModal={setShowModal} handleUsePoints={handleUsePoints} points={user.asle_card.points} points_value={serviceSelected.points_value} />
-    </>
+        {user.asle_card &&
+            <UsePoints
+                showModal={showModal}
+                setShowModal={setShowModal}
+                handleUsePoints={handleUsePoints}
+                points={user.asle_card.points}
+                points_value={serviceSelected.points_value}
+            />
+        }    </>
 }
